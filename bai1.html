@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai so 1</title>
+</head>
+<body>
+  <form>
+      <input type="text" id="a" value=""/><br>
+      <input type="text" id="b" value=""/><br>
+      <input type="button" id="c" onclick="Timnghiem()" value="Tìm Nghiệm">
+  </form>
+
+
+  <script>
+      function Timnghiem(){
+          let a= document.getElementById("a").value;
+          let b= document.getElementById("b").value;
+
+          if (a == "" || b ==""){
+              alert("Vui lòng nhập lại dữ liệu");
+          }
+          else {
+              a=Number(a)
+              b=Number(b)
+              Giaiptbacnhat(a,b)
+          }
+      }
+      function Giaiptbacnhat (a,b){
+          if (a==0&&b==0){
+              alert("PT vô số nghiệm");
+          }
+          else  if(a!=0 && b==0){
+              alert("PT có nghiệm x = 0");
+          }
+          else if(a==0 && b!=0){
+              alert("PT vô số Nghiệm");
+          }
+          else {
+              alert("PT có nghiệm x= " + (-b/a));
+          }
+      }
+  </script>
+</body>
+</html>
